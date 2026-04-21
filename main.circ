@@ -598,7 +598,7 @@
     <comp lib="5" loc="(460,400)" name="Hex Digit Display"/>
     <comp lib="5" loc="(60,460)" name="Button">
       <a name="facing" val="south"/>
-      <a name="label" val="S"/>
+      <a name="label" val="v"/>
     </comp>
     <comp loc="(350,200)" name="cell_drawer"/>
     <comp lib="0" loc="(550,520)" name="Tunnel">
@@ -615,7 +615,7 @@
     <comp loc="(450,500)" name="cell_drawer"/>
     <comp lib="5" loc="(60,420)" name="Button">
       <a name="facing" val="north"/>
-      <a name="label" val="W"/>
+      <a name="label" val="^"/>
     </comp>
     <comp loc="(350,400)" name="cell_drawer"/>
     <comp lib="5" loc="(560,200)" name="Hex Digit Display"/>
@@ -665,7 +665,7 @@
     </comp>
     <comp lib="5" loc="(40,460)" name="Button">
       <a name="facing" val="south"/>
-      <a name="label" val="A"/>
+      <a name="label" val="&lt;"/>
     </comp>
     <comp lib="0" loc="(550,320)" name="Tunnel">
       <a name="width" val="8"/>
@@ -686,7 +686,7 @@
     </comp>
     <comp lib="5" loc="(80,460)" name="Button">
       <a name="facing" val="south"/>
-      <a name="label" val="D"/>
+      <a name="label" val="&gt;"/>
     </comp>
     <comp loc="(350,800)" name="cell_drawer"/>
     <comp lib="0" loc="(700,320)" name="Tunnel">
