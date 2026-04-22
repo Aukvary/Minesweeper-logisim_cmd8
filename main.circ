@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-
-  <lib desc="#Wiring" name="0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="facing" val="north"/>
       <a name="fanout" val="1"/>
@@ -112,61 +111,37 @@
       <a name="label" val="flag"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp loc="(1430,190)" name="map_handler"/>
-    <comp lib="0" loc="(260,230)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-    </comp>
-    <comp lib="0" loc="(1110,470)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="left"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(930,230)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="5" loc="(60,460)" name="Button">
+      <a name="facing" val="south"/>
+      <a name="label" val="v"/>
     </comp>
     <comp lib="0" loc="(1110,510)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="flag"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(260,250)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-    </comp>
-    <comp lib="5" loc="(80,460)" name="Button">
-      <a name="facing" val="south"/>
-      <a name="label" val="&gt;"/>
-    </comp>
-    <comp lib="0" loc="(1080,500)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="open"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="5" loc="(520,260)" name="DotMatrix">
+      <a name="matrixcols" val="8"/>
     </comp>
     <comp lib="0" loc="(1110,450)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="reset"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp loc="(1390,470)" name="processor hadnler"/>
-    <comp lib="5" loc="(140,460)" name="Button">
-      <a name="facing" val="south"/>
-      <a name="color" val="#ff4d4a"/>
-      <a name="label" val="F"/>
-    </comp>
-    <comp lib="5" loc="(840,260)" name="DotMatrix">
-      <a name="matrixcols" val="8"/>
-    </comp>
-    <comp lib="0" loc="(120,460)" name="Tunnel">
+    <comp loc="(1110,450)" name="controller"/>
+    <comp lib="5" loc="(60,420)" name="Button">
       <a name="facing" val="north"/>
-      <a name="label" val="open"/>
+      <a name="label" val="^"/>
+    </comp>
+    <comp lib="0" loc="(60,420)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="up"/>
       <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(260,230)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
     </comp>
     <comp lib="5" loc="(40,460)" name="Button">
       <a name="facing" val="south"/>
@@ -177,68 +152,25 @@
       <a name="color" val="#6dff55"/>
       <a name="label" val="O"/>
     </comp>
-    <comp lib="5" loc="(100,420)" name="Button">
-      <a name="facing" val="north"/>
-      <a name="label" val="R"/>
+    <comp lib="0" loc="(260,250)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
     </comp>
-    <comp lib="5" loc="(440,260)" name="DotMatrix">
+    <comp loc="(1390,470)" name="processor hadnler"/>
+    <comp lib="5" loc="(80,460)" name="Button">
+      <a name="facing" val="south"/>
+      <a name="label" val="&gt;"/>
+    </comp>
+    <comp lib="0" loc="(1110,470)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="left"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(600,260)" name="DotMatrix">
       <a name="matrixcols" val="8"/>
     </comp>
-    <comp lib="0" loc="(1080,460)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="up"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(180,260)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-    </comp>
-    <comp lib="5" loc="(60,420)" name="Button">
-      <a name="facing" val="north"/>
-      <a name="label" val="^"/>
-    </comp>
-    <comp loc="(1110,450)" name="controller"/>
-    <comp lib="0" loc="(1110,490)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="right"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="5" loc="(280,260)" name="DotMatrix">
-      <a name="matrixcols" val="8"/>
-    </comp>
-    <comp lib="0" loc="(60,420)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="up"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(80,460)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="right"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(1010,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(180,240)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-    </comp>
-    <comp lib="0" loc="(1080,480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="down"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="5" loc="(60,460)" name="Button">
-      <a name="facing" val="south"/>
-      <a name="label" val="v"/>
-    </comp>
-    <comp lib="0" loc="(1010,260)" name="Pin">
+    <comp lib="0" loc="(930,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
@@ -248,41 +180,108 @@
     <comp lib="5" loc="(760,260)" name="DotMatrix">
       <a name="matrixcols" val="8"/>
     </comp>
-    <comp lib="5" loc="(520,260)" name="DotMatrix">
+    <comp lib="5" loc="(840,260)" name="DotMatrix">
       <a name="matrixcols" val="8"/>
     </comp>
-    <comp lib="0" loc="(240,210)" name="Clock"/>
-    <comp lib="0" loc="(40,460)" name="Tunnel">
+    <comp lib="5" loc="(100,420)" name="Button">
       <a name="facing" val="north"/>
-      <a name="label" val="left"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(930,250)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="R"/>
     </comp>
     <comp lib="0" loc="(60,480)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="down"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
+    <comp lib="5" loc="(440,260)" name="DotMatrix">
+      <a name="matrixcols" val="8"/>
+    </comp>
+    <comp loc="(270,260)" name="row_drawer"/>
+    <comp lib="5" loc="(680,260)" name="DotMatrix">
+      <a name="matrixcols" val="8"/>
+    </comp>
     <comp lib="0" loc="(100,420)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="reset"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="5" loc="(600,260)" name="DotMatrix">
+    <comp lib="5" loc="(280,260)" name="DotMatrix">
       <a name="matrixcols" val="8"/>
     </comp>
-    <comp loc="(270,260)" name="row_drawer"/>
+    <comp loc="(1430,190)" name="map_handler"/>
+    <comp lib="0" loc="(240,210)" name="Clock"/>
+    <comp lib="0" loc="(180,240)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
+    </comp>
+    <comp lib="0" loc="(1110,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="right"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
     <comp lib="5" loc="(360,260)" name="DotMatrix">
       <a name="matrixcols" val="8"/>
     </comp>
-    <comp lib="5" loc="(680,260)" name="DotMatrix">
-      <a name="matrixcols" val="8"/>
+    <comp lib="0" loc="(1080,480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="down"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(80,460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="right"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1080,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="open"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(40,460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="left"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(930,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(180,260)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
+    </comp>
+    <comp lib="5" loc="(140,460)" name="Button">
+      <a name="facing" val="south"/>
+      <a name="color" val="#ff4d4a"/>
+      <a name="label" val="F"/>
+    </comp>
+    <comp lib="0" loc="(120,460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="open"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1010,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1080,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="up"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1010,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="processor hadnler">
@@ -296,27 +295,27 @@
       <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
     </appear>
     <wire from="(300,350)" to="(340,350)"/>
-    <comp lib="0" loc="(80,200)" name="Tunnel">
-      <a name="label" val="clk"/>
+    <comp lib="0" loc="(340,350)" name="Tunnel">
+      <a name="label" val="mem"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="7" loc="(300,370)" name="CdM_8_mark5"/>
     <comp lib="0" loc="(200,420)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="clk"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(340,350)" name="Tunnel">
-      <a name="label" val="mem"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(80,200)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="clk"/>
     </comp>
+    <comp lib="7" loc="(300,370)" name="CdM_8_mark5"/>
     <comp lib="0" loc="(300,340)" name="Tunnel">
       <a name="label" val="data/ins"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(80,200)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="0" loc="(80,200)" name="Tunnel">
       <a name="label" val="clk"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
   </circuit>
   <circuit name="map_selector">
@@ -324,17 +323,7 @@
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp lib="0" loc="(90,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="bus 0"/>
-    </comp>
-    <comp lib="4" loc="(470,280)" name="ROM">
-      <a name="contents">addr/data: 8 8
-0
-</a>
-    </comp>
-    <comp lib="4" loc="(470,160)" name="ROM">
+    <comp lib="4" loc="(470,390)" name="ROM">
       <a name="contents">addr/data: 8 8
 0
 </a>
@@ -344,17 +333,27 @@
 0
 </a>
     </comp>
-    <comp lib="4" loc="(470,50)" name="ROM">
-      <a name="contents">addr/data: 8 8
-0
-</a>
-    </comp>
-    <comp lib="4" loc="(470,390)" name="ROM">
+    <comp lib="4" loc="(470,160)" name="ROM">
       <a name="contents">addr/data: 8 8
 0
 </a>
     </comp>
     <comp lib="4" loc="(470,500)" name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </comp>
+    <comp lib="0" loc="(90,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="bus 0"/>
+    </comp>
+    <comp lib="4" loc="(470,50)" name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </comp>
+    <comp lib="4" loc="(470,280)" name="ROM">
       <a name="contents">addr/data: 8 8
 0
 </a>
@@ -441,42 +440,6 @@
     <wire from="(200,150)" to="(330,150)"/>
     <wire from="(190,140)" to="(190,200)"/>
     <wire from="(320,310)" to="(390,310)"/>
-    <comp lib="0" loc="(390,330)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(560,140)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="IRQ"/>
-    </comp>
-    <comp lib="0" loc="(160,280)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="flag"/>
-    </comp>
-    <comp lib="1" loc="(560,140)" name="OR Gate">
-      <a name="inputs" val="7"/>
-    </comp>
-    <comp lib="2" loc="(430,300)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="3"/>
-    </comp>
-    <comp lib="0" loc="(160,220)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="right"/>
-    </comp>
-    <comp lib="0" loc="(160,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="up"/>
-    </comp>
-    <comp lib="0" loc="(160,120)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="reset"/>
-    </comp>
-    <comp lib="0" loc="(160,260)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="open"/>
-    </comp>
     <comp lib="0" loc="(160,180)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="left"/>
@@ -486,9 +449,45 @@
       <a name="tristate" val="false"/>
       <a name="label" val="vec"/>
     </comp>
+    <comp lib="0" loc="(160,260)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="open"/>
+    </comp>
+    <comp lib="0" loc="(390,330)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(160,280)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="flag"/>
+    </comp>
+    <comp lib="0" loc="(160,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="up"/>
+    </comp>
+    <comp lib="2" loc="(430,300)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="3"/>
+    </comp>
     <comp lib="0" loc="(160,200)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="down"/>
+    </comp>
+    <comp lib="0" loc="(560,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="IRQ"/>
+    </comp>
+    <comp lib="1" loc="(560,140)" name="OR Gate">
+      <a name="inputs" val="7"/>
+    </comp>
+    <comp lib="0" loc="(160,220)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="right"/>
     </comp>
   </circuit>
   <circuit name="cell_drawer">
@@ -748,37 +747,20 @@
     <wire from="(150,750)" to="(290,750)"/>
     <wire from="(710,260)" to="(710,310)"/>
     <wire from="(560,270)" to="(560,320)"/>
-    <comp lib="0" loc="(220,1120)" name="Constant">
+    <comp lib="0" loc="(220,920)" name="Constant">
       <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
+      <a name="value" val="0x22"/>
     </comp>
-    <comp lib="0" loc="(100,850)" name="Constant">
+    <comp lib="0" loc="(500,920)" name="Constant">
       <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
+      <a name="value" val="0x1c"/>
     </comp>
-    <comp lib="0" loc="(520,1100)" name="Constant">
+    <comp lib="2" loc="(280,910)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
       <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(170,910)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 0"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(360,980)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(240,910)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(450,910)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 2"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(220,1220)" name="Constant">
+    <comp lib="0" loc="(380,1120)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
@@ -790,12 +772,370 @@
       <a name="label" val="row 5"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(130,500)" name="Tunnel">
+      <a name="label" val="selected"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(510,450)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(500,840)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x10"/>
+    </comp>
+    <comp lib="0" loc="(500,1190)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,1060)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(460,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 4"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(560,1050)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(240,830)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,830)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(100,1150)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x41"/>
+    </comp>
+    <comp lib="0" loc="(380,650)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xa"/>
+    </comp>
+    <comp lib="0" loc="(80,1120)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
     <comp lib="0" loc="(130,330)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="cell data"/>
     </comp>
-    <comp lib="0" loc="(500,860)" name="Constant">
+    <comp lib="1" loc="(260,700)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(50,660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="cell data"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(50,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="cell data"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(370,630)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x9"/>
+    </comp>
+    <comp lib="1" loc="(510,350)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(380,930)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x3f"/>
+    </comp>
+    <comp lib="0" loc="(580,490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="row 6"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(520,1200)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,1140)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x41"/>
+    </comp>
+    <comp lib="0" loc="(370,1030)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(90,800)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(450,910)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(360,920)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x8"/>
+    </comp>
+    <comp lib="0" loc="(220,1140)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x30"/>
+    </comp>
+    <comp lib="0" loc="(360,1130)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(90,1040)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(380,1180)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,930)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x38"/>
+    </comp>
+    <comp lib="0" loc="(220,880)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(220,1120)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x24"/>
+    </comp>
+    <comp lib="0" loc="(500,1150)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,910)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x41"/>
+    </comp>
+    <comp lib="0" loc="(100,1110)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x3e"/>
+    </comp>
+    <comp lib="0" loc="(100,1130)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
+    <comp lib="0" loc="(80,940)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(360,1210)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(740,900)" name="DotMatrix">
+      <a name="matrixcols" val="1"/>
+    </comp>
+    <comp lib="0" loc="(580,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="row 0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(140,820)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(510,400)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(510,500)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(380,970)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(360,880)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x3a"/>
+    </comp>
+    <comp lib="0" loc="(380,1100)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,950)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,920)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(360,860)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x22"/>
+    </comp>
+    <comp lib="0" loc="(360,840)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(550,490)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(520,1180)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,910)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x41"/>
+    </comp>
+    <comp lib="0" loc="(420,1050)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(140,530)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(360,1090)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,1070)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(240,1070)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x7e"/>
+    </comp>
+    <comp lib="0" loc="(230,1040)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(220,1080)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(240,1150)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x41"/>
+    </comp>
+    <comp lib="0" loc="(100,870)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(360,900)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x20"/>
+    </comp>
+    <comp lib="0" loc="(330,700)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(460,480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 6"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(220,940)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(220,1100)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x14"/>
+    </comp>
+    <comp lib="0" loc="(500,1210)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,1170)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(370,710)" name="OR Gate">
+      <a name="width" val="2"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(70,540)" name="Splitter">
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="0" loc="(500,1110)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(550,340)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(240,950)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(460,180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 0"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(560,820)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(100,910)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x7f"/>
+    </comp>
+    <comp lib="0" loc="(80,1200)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,960)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(510,1030)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(100,1190)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(420,640)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(220,1220)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
@@ -804,21 +1144,64 @@
       <a name="select" val="4"/>
       <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(520,910)" name="Constant">
+    <comp lib="0" loc="(100,1170)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x38"/>
+    </comp>
+    <comp lib="0" loc="(80,880)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(460,330)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 3"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(520,870)" name="Constant">
+    <comp lib="0" loc="(220,900)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(360,1110)" name="Constant">
+    <comp lib="1" loc="(510,550)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(240,850)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,620)" name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0x8"/>
+    </comp>
+    <comp lib="0" loc="(100,950)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,1180)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(710,570)" name="Constant"/>
+    <comp lib="0" loc="(240,1090)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x12"/>
+    </comp>
+    <comp lib="0" loc="(80,980)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(240,1130)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x4"/>
+    </comp>
+    <comp lib="0" loc="(520,890)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
+    <comp lib="0" loc="(100,1210)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,1200)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,1060)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
@@ -826,136 +1209,36 @@
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(520,1200)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,1170)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(520,1140)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(520,930)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x38"/>
-    </comp>
-    <comp lib="1" loc="(370,710)" name="OR Gate">
-      <a name="width" val="2"/>
+    <comp lib="1" loc="(290,680)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(140,820)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="2" loc="(140,910)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(500,1210)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,930)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(550,290)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(80,1100)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(280,820)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(560,170)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="selected"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(380,1180)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,1080)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,200)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(580,540)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="row 7"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(240,1090)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,1070)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="0" loc="(520,1180)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,940)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(80,1200)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,400)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(500,900)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(330,700)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(520,890)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(240,1150)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(560,910)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(590,910)" name="Tunnel">
       <a name="width" val="7"/>
       <a name="label" val="row 3"/>
       <a name="labelfont" val="SansSerif plain 9"/>
     </comp>
-    <comp lib="0" loc="(220,1100)" name="Constant">
+    <comp lib="0" loc="(170,1150)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 4"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(240,970)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(440,640)" name="Tunnel">
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
+    <comp lib="0" loc="(360,1150)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x22"/>
+    </comp>
+    <comp lib="4" loc="(170,330)" name="Register"/>
+    <comp lib="0" loc="(380,850)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x26"/>
+    </comp>
+    <comp lib="0" loc="(240,870)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(580,290)" name="Pin">
       <a name="facing" val="west"/>
@@ -965,6 +1248,403 @@
       <a name="label" val="row 2"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(360,1170)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(460,430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 5"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(510,800)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(110,800)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(380,1080)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(310,1150)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 5"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(360,1110)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,1100)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(140,910)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="2" loc="(420,1140)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(360,1070)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(220,1160)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x8"/>
+    </comp>
+    <comp lib="0" loc="(170,330)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="cell data"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(100,970)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(100,930)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,890)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x1c"/>
+    </comp>
+    <comp lib="0" loc="(420,820)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(100,850)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(740,920)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x22"/>
+    </comp>
+    <comp lib="0" loc="(80,900)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(220,840)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,900)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x26"/>
+    </comp>
+    <comp lib="2" loc="(550,240)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(500,860)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
+    <comp lib="0" loc="(80,1080)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x1e"/>
+    </comp>
+    <comp lib="0" loc="(500,1090)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,1100)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
+    <comp lib="0" loc="(450,1140)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 6"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(510,250)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(500,980)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(560,1140)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(520,1080)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(150,750)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(560,170)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="selected"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(240,1170)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x38"/>
+    </comp>
+    <comp lib="0" loc="(170,910)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 0"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(80,840)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,1160)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x1c"/>
+    </comp>
+    <comp lib="0" loc="(220,980)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(580,390)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="row 4"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(80,1140)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x28"/>
+    </comp>
+    <comp lib="0" loc="(460,230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(160,910)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="0" loc="(210,530)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="explose"/>
+    </comp>
+    <comp lib="0" loc="(500,940)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(550,390)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(220,1180)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(80,960)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(150,650)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="1"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="3"/>
+      <a name="bit3" val="0"/>
+    </comp>
+    <comp lib="0" loc="(100,890)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(380,1160)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x38"/>
+    </comp>
+    <comp lib="0" loc="(520,870)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x14"/>
+    </comp>
+    <comp lib="0" loc="(380,950)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(510,200)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(460,330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(100,1070)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(580,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="row 3"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="2" loc="(550,540)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(220,960)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(460,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 7"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,620)" name="Ground">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(380,870)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0xc"/>
+    </comp>
+    <comp lib="0" loc="(80,1220)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(360,940)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(240,910)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x41"/>
+    </comp>
+    <comp lib="0" loc="(520,1160)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(240,930)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(240,1210)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,1140)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x7f"/>
+    </comp>
+    <comp lib="2" loc="(550,190)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(230,800)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(100,1090)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
+    <comp lib="0" loc="(280,1060)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(360,1190)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(550,290)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(440,640)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="print"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(520,970)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(140,1150)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(240,1190)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(460,280)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="7"/>
+      <a name="label" val="row 2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="2" loc="(550,440)" name="Multiplexer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(150,360)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(360,980)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(590,1140)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 7"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(290,710)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(580,540)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="row 7"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(510,300)" name="NOT Gate">
+      <a name="width" val="7"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(140,1060)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(310,910)" name="Tunnel">
+      <a name="width" val="7"/>
+      <a name="label" val="row 1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(220,860)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(110,670)" name="Splitter">
       <a name="fanout" val="6"/>
       <a name="incoming" val="8"/>
@@ -973,9 +1653,40 @@
       <a name="bit6" val="5"/>
       <a name="bit7" val="none"/>
     </comp>
-    <comp lib="0" loc="(500,1110)" name="Constant">
+    <comp lib="0" loc="(280,820)" name="Constant">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(500,1130)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,1120)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,880)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x2a"/>
+    </comp>
+    <comp lib="0" loc="(80,860)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(360,960)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(100,830)" name="Constant">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(240,1110)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x4"/>
+    </comp>
+    <comp lib="2" loc="(560,910)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(580,240)" name="Pin">
       <a name="facing" val="west"/>
@@ -985,47 +1696,14 @@
       <a name="label" val="row 1"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(80,1180)" name="Constant">
+    <comp lib="2" loc="(420,910)" name="Multiplexer">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(240,890)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,1110)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(50,660)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="cell data"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(240,1190)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(230,800)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(150,360)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="0" loc="(370,1030)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(520,970)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(260,700)" name="NOT Gate">
-      <a name="size" val="20"/>
     </comp>
     <comp lib="0" loc="(70,500)" name="Splitter">
       <a name="fanout" val="1"/>
@@ -1040,702 +1718,23 @@
       <a name="bit6" val="none"/>
       <a name="bit7" val="none"/>
     </comp>
-    <comp lib="0" loc="(380,930)" name="Constant">
+    <comp lib="0" loc="(520,850)" name="Constant">
       <a name="width" val="7"/>
-      <a name="value" val="0x3f"/>
+      <a name="value" val="0x2a"/>
     </comp>
-    <comp lib="0" loc="(460,380)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 4"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="2" loc="(550,240)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(220,920)" name="Constant">
+    <comp lib="0" loc="(380,830)" name="Constant">
       <a name="width" val="7"/>
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(80,1140)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,1210)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,840)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="0" loc="(220,1080)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="0" loc="(560,820)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="2" loc="(420,1140)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(110,800)" name="Probe">
+    <comp lib="0" loc="(430,620)" name="Probe">
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(50,540)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="cell data"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(240,950)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(280,910)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(360,1210)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(240,970)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,920)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,900)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,850)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(80,980)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="5" loc="(740,900)" name="DotMatrix">
-      <a name="matrixcols" val="1"/>
-    </comp>
-    <comp lib="0" loc="(80,1120)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,1180)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(740,920)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x38"/>
-    </comp>
-    <comp lib="0" loc="(710,570)" name="Constant"/>
-    <comp lib="0" loc="(380,1060)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(590,1140)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 7"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(560,1050)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(500,880)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,1130)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(280,1060)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(580,190)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="row 0"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="2" loc="(550,340)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(420,1050)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(360,900)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,860)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(550,490)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(80,1220)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,880)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(460,530)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 7"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="2" loc="(550,440)" name="Multiplexer">
-      <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(370,800)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="4"/>
       <a name="label" val="print"/>
       <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(380,650)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0xa"/>
-    </comp>
-    <comp lib="0" loc="(460,230)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 1"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(510,550)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(360,880)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(210,530)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="explose"/>
-    </comp>
-    <comp lib="0" loc="(240,1170)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x38"/>
-    </comp>
-    <comp lib="0" loc="(100,950)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,860)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(510,1030)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(500,960)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,1090)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(460,280)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 2"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(220,1140)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,1190)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,500)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(240,930)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(150,750)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(80,1080)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="0" loc="(100,1170)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x38"/>
-    </comp>
-    <comp lib="0" loc="(240,870)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(240,850)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,250)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(240,830)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(520,1120)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(90,1040)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(380,1200)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(420,640)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(100,830)" name="Constant">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(240,1210)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(500,1070)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="0" loc="(500,840)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="2" loc="(560,1140)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(370,630)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0x9"/>
-    </comp>
-    <comp lib="0" loc="(90,800)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(500,980)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,1150)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(130,500)" name="Tunnel">
-      <a name="label" val="selected"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(580,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="row 3"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(500,940)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,890)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(220,960)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,1190)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,870)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,910)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(460,180)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 0"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(360,1130)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(520,830)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(500,1090)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(500,920)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(240,1110)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(500,1150)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(550,190)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(380,620)" name="Constant">
-      <a name="width" val="4"/>
-      <a name="value" val="0x8"/>
-    </comp>
-    <comp lib="0" loc="(380,1120)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,960)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,950)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(160,910)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="2" loc="(550,390)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(240,1070)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x7e"/>
-    </comp>
-    <comp lib="0" loc="(220,980)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(500,1170)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(80,940)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,840)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="2" loc="(140,1150)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(420,820)" name="Constant">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(230,1040)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(430,620)" name="Probe">
-      <a name="facing" val="south"/>
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(100,870)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(80,960)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,970)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,450)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="1" loc="(510,300)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(580,490)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="row 6"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(290,680)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(100,1090)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,1100)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(130,620)" name="Ground">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(310,910)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 1"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(170,1150)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 4"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="1" loc="(290,710)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(460,480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 6"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(580,390)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="row 4"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(150,650)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-      <a name="appear" val="center"/>
-      <a name="bit0" val="1"/>
-      <a name="bit1" val="2"/>
-      <a name="bit2" val="3"/>
-      <a name="bit3" val="0"/>
-    </comp>
-    <comp lib="0" loc="(220,1160)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(420,910)" name="Multiplexer">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(240,890)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(520,1160)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(170,330)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="cell data"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(520,1060)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(450,1140)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 6"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(70,540)" name="Splitter">
-      <a name="incoming" val="8"/>
-      <a name="appear" val="center"/>
-      <a name="bit0" val="none"/>
-      <a name="bit1" val="none"/>
-      <a name="bit2" val="none"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="none"/>
-      <a name="bit5" val="none"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="none"/>
-    </comp>
-    <comp lib="0" loc="(80,880)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(360,940)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,1070)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(510,800)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="4"/>
-      <a name="label" val="print"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(520,1080)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(140,530)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(380,890)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(520,950)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(500,1130)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,1140)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,910)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(240,1130)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="4" loc="(170,330)" name="Register"/>
-    <comp lib="0" loc="(80,840)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x40"/>
-    </comp>
-    <comp lib="0" loc="(80,900)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(100,970)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,830)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(310,1150)" name="Tunnel">
-      <a name="width" val="7"/>
-      <a name="label" val="row 5"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(80,920)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(380,1160)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x38"/>
-    </comp>
-    <comp lib="0" loc="(100,1150)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(80,1160)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="1" loc="(510,350)" name="NOT Gate">
-      <a name="width" val="7"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(460,430)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="7"/>
-      <a name="label" val="row 5"/>
-      <a name="labelfont" val="SansSerif plain 9"/>
-    </comp>
-    <comp lib="0" loc="(520,850)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="2" loc="(550,540)" name="Multiplexer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(500,1190)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(80,860)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(140,1060)" name="Constant">
-      <a name="facing" val="west"/>
     </comp>
   </circuit>
   <circuit name="row_drawer">
@@ -1753,8 +1752,8 @@
       <circ-port height="10" pin="630,140" width="10" x="105" y="245"/>
       <circ-port height="10" pin="630,170" width="10" x="115" y="245"/>
       <circ-port height="10" pin="630,200" width="10" x="125" y="245"/>
-      <circ-port height="10" pin="630,230" width="10" x="145" y="245"/>
-      <circ-port height="10" pin="630,260" width="10" x="135" y="245"/>
+      <circ-port height="10" pin="630,230" width="10" x="135" y="245"/>
+      <circ-port height="10" pin="630,260" width="10" x="145" y="245"/>
       <circ-port height="10" pin="630,290" width="10" x="155" y="245"/>
       <circ-port height="10" pin="630,390" width="10" x="165" y="245"/>
       <circ-port height="10" pin="630,420" width="10" x="175" y="245"/>
@@ -2016,146 +2015,80 @@
     <wire from="(560,540)" to="(630,540)"/>
     <wire from="(930,200)" to="(940,200)"/>
     <wire from="(1270,450)" to="(1290,450)"/>
-    <comp loc="(540,450)" name="cell_drawer">
+    <comp lib="0" loc="(630,740)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="22"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1330,120)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="62"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1240,150)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="celll 6"/>
+    </comp>
+    <comp lib="0" loc="(940,740)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="52"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(590,140)" name="cell_drawer">
       <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(940,890)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="57"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(850,170)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
       <a name="label" val="celll 3"/>
     </comp>
-    <comp lib="0" loc="(630,570)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="16"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,600)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="47"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(1270,430)" name="cell_drawer">
+    <comp loc="(900,140)" name="cell_drawer">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(940,200)" name="Pin">
+    <comp lib="0" loc="(940,390)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="34"/>
+      <a name="label" val="40"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(940,710)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="51"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,680)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="50"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(590,140)" name="cell_drawer">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(940,860)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="56"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1310,490)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="74"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,230)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="35"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(540,170)" name="Pin">
+    <comp lib="0" loc="(850,770)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="celll 0"/>
+      <a name="label" val="celll 5"/>
     </comp>
-    <comp lib="0" loc="(1310,580)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="77"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="37"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1330,210)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="65"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(1290,120)" name="cell_drawer">
+    <comp loc="(900,740)" name="cell_drawer">
       <a name="facing" val="south"/>
     </comp>
-    <comp lib="0" loc="(1310,520)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
+    <comp lib="0" loc="(210,350)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="75"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(1330,90)" name="Pin">
+    <comp lib="0" loc="(940,480)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="61"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,540)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="15"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1310,400)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="71"/>
+      <a name="label" val="43"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(630,890)" name="Pin">
@@ -2166,12 +2099,273 @@
       <a name="label" val="27"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(940,80)" name="Pin">
+    <comp lib="0" loc="(940,290)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="30"/>
+      <a name="label" val="37"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1330,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="66"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="11"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(1270,430)" name="cell_drawer">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(1310,520)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="75"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1330,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="64"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,830)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="55"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,770)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="23"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="36"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,680)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="50"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="33"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="03"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(510,770)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="cell 2"/>
+    </comp>
+    <comp lib="0" loc="(630,110)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="01"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,860)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="56"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,600)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="47"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,540)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="45"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="74"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(900,450)" name="cell_drawer">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(1330,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="65"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,580)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="77"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,450)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="42"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1220,460)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="celll 7"/>
+    </comp>
+    <comp lib="0" loc="(630,570)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="16"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="41"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,370)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="70"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,110)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="31"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="02"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="34"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1330,90)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="61"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(540,170)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="celll 0"/>
+    </comp>
+    <comp lib="0" loc="(630,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="05"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,710)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="21"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,460)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="73"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,550)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="76"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,800)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="54"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(1330,60)" name="Pin">
@@ -2180,6 +2374,137 @@
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
       <a name="label" val="60"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(510,480)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="cell 1"/>
+    </comp>
+    <comp lib="0" loc="(630,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="06"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,600)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="17"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,800)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="24"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="35"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,770)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="53"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(940,80)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="30"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1330,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="67"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,430)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="72"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,450)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="12"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,680)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="20"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1310,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="71"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,540)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="15"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,510)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="14"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(850,480)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="celll 4"/>
+    </comp>
+    <comp loc="(1290,120)" name="cell_drawer">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(540,450)" name="cell_drawer">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp loc="(540,740)" name="cell_drawer">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(940,710)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="51"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(940,570)" name="Pin">
@@ -2198,223 +2523,12 @@
       <a name="label" val="44"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(1220,460)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="celll 7"/>
-    </comp>
-    <comp lib="0" loc="(1330,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="66"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1240,150)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="celll 6"/>
-    </comp>
-    <comp lib="0" loc="(510,770)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="cell 2"/>
-    </comp>
-    <comp lib="0" loc="(630,140)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="02"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(850,480)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="celll 4"/>
-    </comp>
-    <comp lib="0" loc="(630,480)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="13"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,80)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="00"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,390)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="40"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(850,770)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="celll 5"/>
-    </comp>
-    <comp lib="0" loc="(1310,430)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="72"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,260)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="06"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,680)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="20"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1310,550)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="76"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,830)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="55"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,510)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="14"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,420)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="41"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,890)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="57"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(630,830)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
       <a name="label" val="25"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(900,450)" name="cell_drawer">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(630,110)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="01"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,420)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="11"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(540,740)" name="cell_drawer">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(940,170)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="33"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,200)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="04"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(210,350)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="clk"/>
-    </comp>
-    <comp lib="0" loc="(940,740)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="52"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,170)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="03"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,770)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="53"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1310,370)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="70"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,540)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="45"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(630,390)" name="Pin">
@@ -2425,89 +2539,6 @@
       <a name="label" val="10"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(630,230)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="05"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(510,480)" name="Pin">
-      <a name="width" val="8"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="cell 1"/>
-    </comp>
-    <comp lib="0" loc="(630,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="07"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,710)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="21"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,110)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="31"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(900,740)" name="cell_drawer">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(630,600)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="17"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,480)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="43"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,800)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="24"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,450)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="12"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp loc="(900,140)" name="cell_drawer">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(1330,120)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="62"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(1330,150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -2516,12 +2547,12 @@
       <a name="label" val="63"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(1330,270)" name="Pin">
+    <comp lib="0" loc="(630,860)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="67"/>
+      <a name="label" val="26"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(940,140)" name="Pin">
@@ -2532,68 +2563,36 @@
       <a name="label" val="32"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(940,260)" name="Pin">
+    <comp lib="0" loc="(630,290)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="36"/>
+      <a name="label" val="07"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(940,800)" name="Pin">
+    <comp lib="0" loc="(630,200)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="54"/>
+      <a name="label" val="04"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(630,770)" name="Pin">
+    <comp lib="0" loc="(630,80)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="23"/>
+      <a name="label" val="00"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(1310,460)" name="Pin">
+    <comp lib="0" loc="(630,480)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="73"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1330,180)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="64"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(940,450)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="42"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,740)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="22"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(630,860)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="26"/>
+      <a name="label" val="13"/>
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
