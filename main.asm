@@ -1,21 +1,9 @@
 asect 0x00
-main:
-    ldi r0, 0xff
-    stsp r0
-    ei
-loop: 
-    wait 
-    br loop
+br main
+map: ds 16
+cell_ptr: ds 1
+game_state: ds 1
 
-
-asect 0x24
-    vector2: dc 0xc0    
-
-asect 0xc0
-irq_handler:
-    pushall
-    
-    popall
-    rti
-
+main: 
+	br main
 end
