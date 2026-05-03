@@ -6,8 +6,11 @@ cell_ptr: ds 1
 mines_left: ds 1
 
 main:
+	setsp 0x00
 	ei
-	wait
+main_loop:
+    wait
+    br main_loop
 
 
 left:
@@ -29,7 +32,7 @@ left:
 	st r2, r0
 	
 	popall
-	rts
+	rti
 	
 right:
 	pushall
@@ -52,7 +55,7 @@ right:
 	st r2, r0
 	
 	popall
-	rts
+	rti
 	
 up:
 	pushall
@@ -75,7 +78,7 @@ up:
 	st r2, r0
 	
 	popall
-	rts
+	rti
 
 down:
 	pushall
@@ -98,7 +101,7 @@ down:
 	st r2, r0
 	
 	popall
-	rts
+	rti
 
 open:
 	pushall
@@ -134,9 +137,9 @@ open:
 			ldi r0, 2
 			and r2, r0
 		is z
-			#just open
+			br open_display
 		else
-			#lose logic
+			br lose
 		fi
 	else
 		popall
@@ -144,27 +147,25 @@ open:
 	fi
 	
 	popall
-	rts
+	rti
 
 flag:
     pushall
-    
-    # 1. Получаем индекс байта и адрес
+
     ldi r0, cell_ptr
     ld r0, r0
     move r0, r1
     shr r1
     shr r1
     ldi r2, map
-    add r1, r2         # r2 = адрес байта
-    ld r2, r3          # r3 = значение байта
-    
-    # 2. Готовим маски (используем стек для хранения маски мины)
+    add r1, r2
+    ld r2, r3
+
     ldi r1, 3
-    and r0, r1         # r0 = номер клетки в байте (0-3)
+    and r0, r1
     
-    ldi r1, 1          # Маска флага
-    ldi r3, 2          # Маска мины (используем r3 временно)
+    ldi r1, 1
+    ldi r3, 2
     
     if 
 		tst r0
@@ -178,48 +179,47 @@ flag:
         until z
     fi
     
-    push r3            # Сохраняем маску мины в стек
+    push r3
     
-    # 3. Переключаем флаг
-    ld r2, r3          # Снова читаем байт из памяти в r3
+    ld r2, r3
     xor r1, r3
-    st r2, r3          # Сохраняем обновленный байт
+    st r2, r3
     
-    # 4. Проверяем мину
-    pop r0             # Достаем маску мины в r0
-    move r3, r1        # Копируем байт в r1 для проверки
-    and r0, r1         # Проверяем бит мины
+    pop r0
+    move r3, r1
+    and r0, r1
     
     if 
 		tst r1
     is ne
-        # Если мина была, проверяем состояние флага
-        popall         # Временно восстанавливаем r1 из pushall для маски флага
-        pushall        # Но нам нужен r1, который был маской флага
-        # Чтобы не портить стек pushall, лучше пересчитать или сохранить маску флага
-        
-        # Упростим: перечитаем флаг из r3
-        # r3 сейчас содержит байт после XOR, r0 — маска мины
-        # Нам нужна маска флага. Она всегда r0 >> 1
+        popall
+        pushall
+
         shr r0         
         move r3, r1
-        and r0, r1     # r1 теперь содержит только бит флага
+        and r0, r1
         
         ldi r2, mines_left
-        ld r2, r0      # r0 = количество мин
+        ld r2, r0
         
         if 
 			tst r1
         is ne
-            dec r0     # Флаг поставлен на мину
+            dec r0
+			if 
+				tst r0
+			is z
+				br win
+			fi
         else
-            inc r0     # Флаг снят с мины
+            inc r0
         fi
         st r2, r0
     fi
     
     popall
-    rts
+    rti
+
 reset:
 	clr r0
 	clr r1
@@ -229,8 +229,17 @@ reset:
 	ldi r0, mines_left
 	ldi r1, 0x0A
 	st r0, r1
+	rti
 	
-load_map:
-	ldi r0, cell_ptr
+load_map: 
+	br map
+	rti
+	
+win: wait	
+
+lose: wait
+
+open_display: 
+	rti
 
 end
