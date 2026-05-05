@@ -15,7 +15,6 @@ mines_left: ds 1
 main:
 	ei
 main_loop:
-	br left
     wait
 
 
