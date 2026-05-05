@@ -1,16 +1,22 @@
 asect 0x00
-br main
+br main 	#0
+br left		#1
+br right	#2
+br up		#3
+br down		#4
+br open		#5
+br flag		#6
+br reset	#7
 
 map: ds 16
 cell_ptr: ds 1
 mines_left: ds 1
 
 main:
-	setsp 0x00
 	ei
 main_loop:
+	br left
     wait
-    br main_loop
 
 
 left:

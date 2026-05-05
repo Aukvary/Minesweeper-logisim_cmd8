@@ -1,8 +1,7 @@
 asect 0x00
-br main
-
-asect 0x10
-main: 
-	halt
+ldi r0, 0x10
+ldi r1, 0x20
+add r0, r1 
+halt
 	
 end
