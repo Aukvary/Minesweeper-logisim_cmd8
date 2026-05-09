@@ -1,26 +1,18 @@
 asect 0x00
 br main 	#0
-br left		#1
-br right	#2
-br up		#3
-br down		#4
-br open		#5
-br flag		#6
-br reset	#7
 
 map: ds 16
 cell_ptr: ds 1
 mines_left: ds 1
 
 main:
+	setsp 0xf0
 	ei
 main_loop:
     wait
 
 
 left:
-	pushall
-	
 	ldi r2, cell_ptr
 	ld r2, r0
 	
@@ -36,12 +28,9 @@ left:
 	
 	st r2, r0
 	
-	popall
 	rti
 	
-right:
-	pushall
-	
+right:	
 	ldi r2, cell_ptr
 	ld r2, r0
 	
@@ -58,13 +47,9 @@ right:
 	fi
 	
 	st r2, r0
-	
-	popall
 	rti
 	
 up:
-	pushall
-	
 	ldi r2, cell_ptr
 	ld r2, r0
 	
@@ -81,13 +66,9 @@ up:
 	fi
 	
 	st r2, r0
-	
-	popall
 	rti
 
 down:
-	pushall
-	
 	ldi r2, cell_ptr
 	ld r2, r0
 	
@@ -104,12 +85,9 @@ down:
 	fi
 	
 	st r2, r0
-	
-	popall
 	rti
 
 open:
-	pushall
 	ldi r0, cell_ptr
 	ld r0, r0
 	
@@ -147,16 +125,12 @@ open:
 			br lose
 		fi
 	else
-		popall
-		rts
+		rti
 	fi
 	
-	popall
 	rti
 
 flag:
-    pushall
-
     ldi r0, cell_ptr
     ld r0, r0
     move r0, r1
@@ -221,8 +195,6 @@ flag:
         fi
         st r2, r0
     fi
-    
-    popall
     rti
 
 reset:
@@ -236,15 +208,20 @@ reset:
 	st r0, r1
 	rti
 	
-load_map: 
-	br map
-	rti
-	
 win: wait	
 
 lose: wait
 
 open_display: 
 	rti
+	
+asect 0xf0
+dc left, 0x00
+dc right, 0x00
+dc up, 0x00
+dc down, 0x00
+dc open, 0x00
+dc flag, 0x00
+dc reset, 0x00
 
 end
