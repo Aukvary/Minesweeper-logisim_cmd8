@@ -9,7 +9,8 @@ main:
 	setsp 0xf0
 	ei
 main_loop:
-    wait
+    br main_loop
+	#wait
 
 
 left:
@@ -208,9 +209,9 @@ reset:
 	st r0, r1
 	rti
 	
-win: wait	
+win: halt
 
-lose: wait
+lose: halt
 
 open_display: 
 	rti
