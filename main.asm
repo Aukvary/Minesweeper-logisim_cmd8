@@ -1,15 +1,16 @@
 asect 0x00
-br main 	#0
+br main 	
 
-map: ds 16
+map: ds 1
 cell_ptr: ds 1
 mines_left: ds 1
 
 main:
 	setsp 0xf0
 	ei
+	jsr reset
 main_loop:
-    br main_loop
+	br main_loop
 	#wait
 
 
@@ -199,15 +200,10 @@ flag:
     rti
 
 reset:
-	clr r0
-	clr r1
-	clr r2
-	clr r3
-	
 	ldi r0, mines_left
 	ldi r1, 0x0A
 	st r0, r1
-	rti
+	rts
 	
 win: halt
 
@@ -218,11 +214,11 @@ open_display:
 	
 asect 0xf0
 dc left, 0x00
-dc right, 0x00
 dc up, 0x00
+dc right, 0x00
 dc down, 0x00
 dc open, 0x00
 dc flag, 0x00
 dc reset, 0x00
 
-end
+end.
