@@ -10,8 +10,8 @@ main:
 	ei
 	jsr reset
 main_loop:
+	wait
 	br main_loop
-	#wait
 
 
 left:
@@ -89,114 +89,31 @@ down:
 	st r2, r0
 	rti
 
-open:
-	ldi r0, cell_ptr
+# r0 - chunk data
+# r1 - cell num
+# r2 - chunk addr
+get_map_cell:
+	ldi r2, cell_ptr
+	ld r2, r1
+	
+	shr r1
+	shr r1
+	
+	ldi r0, map
+	add r1, r0
+	move r0, r2
 	ld r0, r0
 	
-	move r0, r1
-	shr r1
-	shr r1
+	rts
 	
-	ldi r2, map
-	add r1, r2
-	ld r2, r3
-	
-	ldi r1, 0x03
-	and r1, r0
-	
-	if 
-		tst r0
-	is ne
-		do
-			shr r2
-			shr r2
-			dec r0
-		until z
-	fi
-		
-	if
-		ldi r0, 1
-		and r2, r0	
-	is z
-		if 
-			ldi r0, 2
-			and r2, r0
-		is z
-			br open_display
-		else
-			br lose
-		fi
-	else
-		rti
-	fi
+
+open:
+	#TODO
 	
 	rti
 
 flag:
-    ldi r0, cell_ptr
-    ld r0, r0
-    move r0, r1
-    shr r1
-    shr r1
-    ldi r2, map
-    add r1, r2
-    ld r2, r3
-
-    ldi r1, 3
-    and r0, r1
-    
-    ldi r1, 1
-    ldi r3, 2
-    
-    if 
-		tst r0
-    is ne
-        do
-            shl r1
-            shl r1
-            shl r3
-            shl r3
-            dec r0
-        until z
-    fi
-    
-    push r3
-    
-    ld r2, r3
-    xor r1, r3
-    st r2, r3
-    
-    pop r0
-    move r3, r1
-    and r0, r1
-    
-    if 
-		tst r1
-    is ne
-        popall
-        pushall
-
-        shr r0         
-        move r3, r1
-        and r0, r1
-        
-        ldi r2, mines_left
-        ld r2, r0
-        
-        if 
-			tst r1
-        is ne
-            dec r0
-			if 
-				tst r0
-			is z
-				br win
-			fi
-        else
-            inc r0
-        fi
-        st r2, r0
-    fi
+	#TODO
     rti
 
 reset:
@@ -214,8 +131,8 @@ open_display:
 	
 asect 0xf0
 dc left, 0x00
-dc up, 0x00
 dc right, 0x00
+dc up, 0x00
 dc down, 0x00
 dc open, 0x00
 dc flag, 0x00
