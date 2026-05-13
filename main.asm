@@ -1,21 +1,21 @@
 asect 0x00
 br main 	
 
+cursor: ds 1
+mines: ds 1
 map: ds 1
-cell_ptr: ds 1
-mines_left: ds 1
 
 main:
+	jsr reset
 	setsp 0xf0
 	ei
-	jsr reset
 main_loop:
 	wait
 	br main_loop
 
 
 left:
-	ldi r2, cell_ptr
+	ldi r2, cursor
 	ld r2, r0
 	
 	if 
@@ -33,7 +33,7 @@ left:
 	rti
 	
 right:	
-	ldi r2, cell_ptr
+	ldi r2, cursor
 	ld r2, r0
 	
 	if 
@@ -52,7 +52,7 @@ right:
 	rti
 	
 up:
-	ldi r2, cell_ptr
+	ldi r2, cursor
 	ld r2, r0
 	
 	if 
@@ -71,7 +71,7 @@ up:
 	rti
 
 down:
-	ldi r2, cell_ptr
+	ldi r2, cursor
 	ld r2, r0
 	
 	if 
@@ -92,42 +92,64 @@ down:
 # r0 - chunk data
 # r1 - cell num
 # r2 - chunk addr
-get_map_cell:
-	ldi r2, cell_ptr
+set_cells_data:
+	ldi r2, cursor
 	ld r2, r1
+	push r1
 	
-	shr r1
-	shr r1
+	shra r1
+	shra r1
 	
-	ldi r0, map
-	add r1, r0
-	move r0, r2
-	ld r0, r0
+	ldi r2, map
+	add r1, r2
+	
+	ld r2, r0
+	
+	pop r1
+	
+	rts
+	
+#args:
+#r1 - cell num
+
+#result
+#r0 - corrapted
+#r2 - flag mask
+#r3 - mine mask
+get_cell_masks:	
+	ldi r0, 0x03
+
+	ldi r2, 0b10000000
+	ldi r3, 0b01000000	
+
+	and r1, r0
+	
+	while
+		tst r0
+	stays ne
+		shra r3
+		shra r3
+		
+		shra r2
+		shra r2
+		
+		dec r0
+	wend
 	
 	rts
 	
 
 open:
-	ldi r3, 0x03
-	and r1, r3
-	
-	while 
-		tst r2
-	stays ne
-		shr r0
-		shr r0
-		dec r3
-	wend
-	
-	ldi r3, 0x02
+	jsr set_cells_data
+	push r0
+	jsr get_cell_masks
+	pop r0
 	
 	if
-		and r0, r3
+		and r0, r2
 	is ne
 		rti
 	fi
-	
-	ldi r3, 0x01
 	
 	if 
 		and r0, r3
@@ -137,64 +159,83 @@ open:
 	
 	rti
 
-flag:
-	jsr get_map_cell
-	push r2		#addr
+flag:	
+	jsr set_cells_data
+	push r2 	#addr
 	push r0		#data
+	jsr get_cell_masks
+	#r2 - flag
+	#r3 - mine
+	ldi r1, mines
+	ld r1, r1
 	
-	ldi r0, 0x01
-	ldi r2, 0x02
-	ldi r3, 0x03
-	
-	and r1, r3
-	
-	while
-		tst r3
-	stays ne
-		shl r0
-		shl r0
-		
-		shl r2
-		shl r2
-		
-		dec r3
-	wend
-	
-	if
-		ldi r1, mines_left
-		ld r1, r1
-		ldi r3, 0b11110000
-		and r1, r3
+	if 
+		ldi r0, 0b11110000
+		and r1, r0
 		is z
-		pop r3
-		push r3
-		
-		and r3, r2
-		is z
-	then
-		rti
+		pop r0
+		push r0
+		and r3, r0
+		is ne
+	then 
+		pop r0
+		pop r0
+		rts
 	fi
 	
-	pop r3
-	push r0
-	xor r2, r3
+	pop r0
+	xor r2, r0
+	pop r1
+	st r1, r0
 	
+	if
+		and r0, r2
+	is z 		#remove flag
+		ldi r1, 0x01
+		
+		if
+			and r0, r3
+		is ne 	#is mine
+			ldi r2, 0x01
+		else
+			ldi r2, 0x00
+		fi
+	else		#put flag
+		ldi r1, 0xff
+		if 
+			and r0, r3
+		is ne	#is mine
+			ldi r2, 0xff
+		else
+			ldi r2, 0x00
+		fi
+	fi
 	
-	
-    rti
+	ldi r3, mines
+	ld r3, r0
+	add r2, r0
+	rol r0
+	rol r0
+	rol r0
+	rol r0
+	add r1, r0
+	rol r0
+	rol r0
+	rol r0
+	rol r0
+	st r3, r0
+		
+    rts
 
 reset:
-	ldi r0, mines_left
+	ldi r0, mines
 	ldi r1, 0x0A
 	st r0, r1
 	rts
 	
 win: halt
-
 lose: halt
 
-open_display: 
-	rti
 	
 asect 0xf0
 dc left, 0x00
