@@ -108,12 +108,79 @@ get_map_cell:
 	
 
 open:
-	#TODO
+	ldi r3, 0x03
+	and r1, r3
+	
+	while 
+		tst r2
+	stays ne
+		shr r0
+		shr r0
+		dec r3
+	wend
+	
+	ldi r3, 0x02
+	
+	if
+		and r0, r3
+	is ne
+		rti
+	fi
+	
+	ldi r3, 0x01
+	
+	if 
+		and r0, r3
+	is ne
+		br lose
+	fi
 	
 	rti
 
 flag:
-	#TODO
+	jsr get_map_cell
+	push r2		#addr
+	push r0		#data
+	
+	ldi r0, 0x01
+	ldi r2, 0x02
+	ldi r3, 0x03
+	
+	and r1, r3
+	
+	while
+		tst r3
+	stays ne
+		shl r0
+		shl r0
+		
+		shl r2
+		shl r2
+		
+		dec r3
+	wend
+	
+	if
+		ldi r1, mines_left
+		ld r1, r1
+		ldi r3, 0b11110000
+		and r1, r3
+		is z
+		pop r3
+		push r3
+		
+		and r3, r2
+		is z
+	then
+		rti
+	fi
+	
+	pop r3
+	push r0
+	xor r2, r3
+	
+	
+	
     rti
 
 reset:
