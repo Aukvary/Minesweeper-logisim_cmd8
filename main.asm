@@ -6,9 +6,9 @@ mines: ds 1
 map: ds 1
 
 main:
-	jsr reset
 	setsp 0xf0
 	ei
+	jsr reset
 main_loop:
 	wait
 	br main_loop
@@ -127,11 +127,11 @@ get_cell_masks:
 	while
 		tst r0
 	stays ne
-		shra r3
-		shra r3
+		shr r3
+		shr r3
 		
-		shra r2
-		shra r2
+		shr r2
+		shr r2
 		
 		dec r0
 	wend
@@ -180,7 +180,7 @@ flag:
 	then 
 		pop r0
 		pop r0
-		rts
+		rti
 	fi
 	
 	pop r0
@@ -205,31 +205,45 @@ flag:
 		if 
 			and r0, r3
 		is ne	#is mine
+			
+			if
+				ldi r3, mines
+				ld r3, r3
+				ldi r2, 0x0f
+				and r3, r2
+			is z
+				br win
+			fi
+				
 			ldi r2, 0xff
 		else
 			ldi r2, 0x00
 		fi
 	fi
 	
-	ldi r3, mines
-	ld r3, r0
-	add r2, r0
-	rol r0
-	rol r0
-	rol r0
-	rol r0
-	add r1, r0
-	rol r0
-	rol r0
-	rol r0
-	rol r0
-	st r3, r0
-		
-    rts
+    ldi r3, mines
+    ld r3, r0        # r0 = [ФЛАГИ|МИНЫ]
+
+    # 1. Обновляем МИНЫ (биты 0-3)
+    move r0, r3      # Копируем оригинал
+    add r2, r3       # Складываем (может задеть биты 4-7, это не страшно)
+    ldi r2, 0x0F     # Маска младшей тетрады
+    and r2, r3       # r3 = [0000|новые_мины]. Теперь старшие биты чисты.
+
+    # 2. Обновляем ФЛАГИ (биты 4-7)
+    add r1, r0       # Складываем дельту флагов с оригиналом
+    ldi r1, 0xF0     # Маска старшей тетрады
+    and r1, r0       # r0 = [новые_флаги|0000]. Теперь младшие биты чисты.
+
+    # 3. Склеиваем результат
+    or r3, r0        # Объединяем оба поля
+    ldi r3, mines
+    st r3, r0        # Сохраняем в память		
+    rti
 
 reset:
 	ldi r0, mines
-	ldi r1, 0x0A
+	ldi r1, 0xAA
 	st r0, r1
 	rts
 	
@@ -238,12 +252,12 @@ lose: halt
 
 	
 asect 0xf0
-dc left, 0x00
-dc right, 0x00
-dc up, 0x00
-dc down, 0x00
-dc open, 0x00
-dc flag, 0x00
-dc reset, 0x00
+dc left, 0x00		#0x00
+dc right, 0x00		#0x01
+dc up, 0x00			#0x02
+dc down, 0x00		#0x03
+dc open, 0x00		#0x04
+dc flag, 0x00		#0x05
+dc reset, 0x00		#0x06
 
 end.
