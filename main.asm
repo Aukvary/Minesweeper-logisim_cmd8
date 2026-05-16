@@ -3,12 +3,25 @@ br main
 
 cursor: ds 1
 mines: ds 1
+flags: ds 1
 map: ds 1
 
 main:
 	setsp 0xf0
+	
+#	ldi r0, 0b00001000
+#	ldi r1, map
+#	ldi r2, 3
+#	add r2, r1
+#	st r1, r0
+#	ldi r1, cursor
+#	ldi r0, 0x0a
+#	st r1, r0
+	
 	ei
 	jsr reset
+	
+#	ioi
 main_loop:
 	wait
 	br main_loop
@@ -119,8 +132,8 @@ set_cells_data:
 get_cell_masks:	
 	ldi r0, 0x03
 
-	ldi r2, 0b10000000
-	ldi r3, 0b01000000	
+	ldi r2, 0x80
+	ldi r3, 0x40
 
 	and r1, r0
 	
@@ -140,6 +153,11 @@ get_cell_masks:
 	
 
 open:
+	ldi r0, 0x00
+	ldi r1, 0x01
+	
+	st r0, r1
+	
 	jsr set_cells_data
 	push r0
 	jsr get_cell_masks
@@ -166,17 +184,16 @@ flag:
 	jsr get_cell_masks
 	#r2 - flag
 	#r3 - mine
-	ldi r1, mines
+	ldi r1, flags
 	ld r1, r1
 	
 	if 
-		ldi r0, 0b11110000
-		and r1, r0
+		tst r1
 		is z
 		pop r0
 		push r0
-		and r3, r0
-		is ne
+		and r2, r0
+		is z
 	then 
 		pop r0
 		pop r0
@@ -202,6 +219,7 @@ flag:
 		fi
 	else		#put flag
 		ldi r1, 0xff
+		
 		if 
 			and r0, r3
 		is ne	#is mine
@@ -212,36 +230,29 @@ flag:
 	fi
 	
     ldi r3, mines
-    ld r3, r0        # r0 = [ФЛАГИ|МИНЫ]
-
-    # 1. Обновляем МИНЫ (биты 0-3)
-    move r0, r3      # Копируем оригинал
-    add r2, r3       # Складываем (может задеть биты 4-7, это не страшно)
-    ldi r2, 0x0F     # Маска младшей тетрады
-    and r2, r3       # r3 = [0000|новые_мины]. Теперь старшие биты чисты.
-
-    # 2. Обновляем ФЛАГИ (биты 4-7)
-    add r1, r0       # Складываем дельту флагов с оригиналом
-    ldi r1, 0xF0     # Маска старшей тетрады
-    and r1, r0       # r0 = [новые_флаги|0000]. Теперь младшие биты чисты.
-
-    # 3. Склеиваем результат
-    or r3, r0        # Объединяем оба поля
+	ld r3, r0
+	add r2, r0
 
 	if 
-		ldi r1, 0x0f
-		and r0, r1
+		tst r0
 	is z
 		br win
 	fi
+	
+    st r3, r0
+	
+	inc r3
+	ld r3, r0
+	add r1, r0
+	st r3, r0
 
-    ldi r3, mines
-    st r3, r0        # Сохраняем в память		
     rti
 
 reset:
 	ldi r0, mines
-	ldi r1, 0xAA
+	ldi r1, 0x0A
+	st r0, r1
+	inc r0
 	st r0, r1
 	rts
 	
