@@ -205,16 +205,6 @@ flag:
 		if 
 			and r0, r3
 		is ne	#is mine
-			
-			if
-				ldi r3, mines
-				ld r3, r3
-				ldi r2, 0x0f
-				and r3, r2
-			is z
-				br win
-			fi
-				
 			ldi r2, 0xff
 		else
 			ldi r2, 0x00
@@ -237,6 +227,14 @@ flag:
 
     # 3. Склеиваем результат
     or r3, r0        # Объединяем оба поля
+
+	if 
+		ldi r1, 0x0f
+		and r0, r1
+	is z
+		br win
+	fi
+
     ldi r3, mines
     st r3, r0        # Сохраняем в память		
     rti

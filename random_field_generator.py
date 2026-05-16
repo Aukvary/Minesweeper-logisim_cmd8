@@ -44,7 +44,7 @@ def generate_real_field():
                 byte |= (count & 0x07)
             
             # Устанавливаем бит 6 (клетка открыта), чтобы всё было видно
-            byte |= (1 << 6)
+            #byte |= (1 << 6)
             
             # Сохраняем в линейный массив (первые 64 байта)
             field[y * WIDTH + x] = byte
@@ -56,7 +56,7 @@ def generate_real_field():
             field[offset + i] = field[i]
 
     # 5. Записываем в файл
-    with open("real_field.img", "w") as f:
+    with open("closed_field.img", "w") as f:
         f.write("v2.0 raw\n")
         for b in field:
             f.write(f"{b:02X}\n")
