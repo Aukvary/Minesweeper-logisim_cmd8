@@ -9,19 +9,8 @@ map: ds 1
 main:
 	setsp 0xf0
 	
-#	ldi r0, 0b00001000
-#	ldi r1, map
-#	ldi r2, 3
-#	add r2, r1
-#	st r1, r0
-#	ldi r1, cursor
-#	ldi r0, 0x0a
-#	st r1, r0
-	
 	ei
 	jsr reset
-	
-#	ioi
 main_loop:
 	wait
 	br main_loop
@@ -153,11 +142,6 @@ get_cell_masks:
 	
 
 open:
-	ldi r0, 0x00
-	ldi r1, 0x01
-	
-	st r0, r1
-	
 	jsr set_cells_data
 	push r0
 	jsr get_cell_masks
@@ -255,9 +239,17 @@ reset:
 	inc r0
 	st r0, r1
 	rts
+
+start:
+	jsr reset
+	ldi r0, cursor
+	ldi r1, 0x00
+	st r0, r1
+	rti
+	ldi r1, 0x00
 	
-win: halt
-lose: halt
+win: br main
+lose: br main
 
 	
 asect 0xf0
@@ -267,6 +259,6 @@ dc up, 0x00			#0x02
 dc down, 0x00		#0x03
 dc open, 0x00		#0x04
 dc flag, 0x00		#0x05
-dc reset, 0x00		#0x06
+dc start, 0x00		#0x06
 
 end.

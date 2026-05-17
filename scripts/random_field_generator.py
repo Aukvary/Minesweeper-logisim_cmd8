@@ -56,7 +56,7 @@ def generate_real_field():
             field[offset + i] = field[i]
 
     # 5. Записываем в файл
-    with open("closed_field.img", "w") as f:
+    with open(f'./../fields/field_{random.randint(0, 1000)}.img', "w") as f:
         f.write("v2.0 raw\n")
         for b in field:
             f.write(f"{b:02X}\n")
